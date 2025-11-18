@@ -19,8 +19,9 @@ Jag kan inte kalla på const och let utanför blocket genom console.log för att
   );
 }
 
+let ålder = 35;
 const namn = "Jack";
-console.log(intresse + namn);
+console.log(intresse + namn + ålder);
 
 /*UPPGIFT 3
 Två stycken = tecken betyder att den jämför värde utan att bry sig om datatypen.
@@ -32,7 +33,10 @@ Undefined = Ett värde som inte finns. Det betyder att något inte fått ett vä
 
 När NaN jämförs med NaN så är det alltid false. Det är bara så med NaN.
 Här jämförs om null är undefined vilket är sant.
-Här jämförs om null och undefined är samma värde och datatyp vilket inte är sant.*/
+Här jämförs om null och undefined är samma värde och datatyp vilket inte är sant.
+
+När ett uttryck står inne i en ternary/if så tolkas det som truthy eller falsy. 
+Eftersom undefined är falsy kommer uttrycket undefined ? "Truthy" : "Falsy" att välja "Falsy".*/
 
 console.log("9" == 9);
 console.log("9" === 9);
@@ -47,7 +51,9 @@ console.log("Undefined är: ", resultat);
 
 /* 
 UPPGIFT 4
-I detta fall har vi använt ett funktionsuttryck. Denna sparas i en variabel och funktionen skapas när koden körs och inte i förväg.
+Det finns tre vanliga sätt vi kan anropa funktioner. Exempelvis med en funktionsdeklaration kan anropas före där den står i koden. 
+Arrowfunktion precis som funktionsuttryck, kan endast anropas efter att variabeln fått sitt värde.
+I detta fall har vi använt ett funktionsuttryck. Denna sparas i en variabel och funktionen skapas när koden körs och inte i förväg. 
 Om man anropar en function inom ett visst scope så har den endast de värdena som finns i detta scopet.
 Exempelvis påverkas inte myName som befinner sig utanför scopet för funktionen greet utav det som befinner sig inom den.
 Om jag ändrar let myName efter att jag deklarerat den så kommer den få det nya värdet. Man kan alltså ändra den hur många gånger som helst och det är alltid det nya värdet som gället. */
